@@ -21,7 +21,8 @@ latest_update = datetime.datetime.now()
 while True:
     data = o.getLatestData(uId)
     if data is not None:
-         if data.tick_last_update > latest_update:
+       
+        if data.tick_last_update > latest_update:
             print('Illumination: {} lx'.format(data.val_light))
             print('temp:{}'.format(data.val_temp))
             print('sound:{}db / humidty:{}%'.format(data.val_noise,data.val_humi))
